@@ -1,21 +1,25 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main ()
 {
+	setlocale(LC_NUMERIC, "pt_BR.utf8");
+
 	int ing;
 	float price, win;
 	price=5.0;
 	ing= 120;
-	printf ("===============================================================================\n");
-	printf ("||     Valor Ingresso   || Ingressos Vend. ||  Gastos   ||      Lucro    ||\n ");
-	for(price=5.0; price>=1.0; price-=0.5){ //LaÁo de RepetiÁ„o para os Valores de R$ 5,00 · R$ 1,00 de 0,50 em 0,50 centavos
-		printf ("===============================================================================\n");
-		win=ing*price-200; // FÛrmula Lucro 
-		printf ("||     R$ %f      ||       %d       || R$ 200,00 || R$ %f ||\n", price, ing, win );
-		ing+=26; // Aumento de +26 ingressos · cada diminuiÁ„o de preÁo
+	printf ("===========================================================================\n");
+	printf ("||     Valor Ingresso   || Ingressos Vend. ||  Gastos   ||      Lucro    ||\n");
+	for(price=5.0; price>=1.0; price-=0.5){ //La√ßo de Repeti√ß√£o para os Valores de R$ 5,00 a R$ 1,00 de 0,50 em 0,50 centavos
+		printf ("==========================================================================\n");
+		win=ing*price-200; // FÔøΩrmula Lucro 
+		printf ("||     R$ %.2f          ||       %d       || R$ 200,00 ||   R$ %.2f   ||\n", price, ing, win );
+		ing+=26; // Aumento de +26 ingressos a cada diminui√ß√£o de pre√ßo
 	}
-	printf ("===============================================================================\n\n\n");
-	system ("PAUSE");
-	return 0;
-	
+	printf ("==========================================================================\n\n\n");
+
+	setlocale(LC_ALL, NULL);
+
+	return 0;	
 }
