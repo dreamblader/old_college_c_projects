@@ -16,6 +16,5 @@ int main()
         usleep(delay*nanoMultiplier);
     }
 
-//system ("PAUSE");
 return 0;
 }

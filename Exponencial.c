@@ -16,7 +16,7 @@ main ()
      return 0;}
          
      for (y; y>0; y--,z*=x) // Decresse Y e Multiplica Z
-     	printf (""); // Somente para o laço executar "algo"
+     	printf (""); // Somente para o laÃ§o executar "algo"
       
      printf ("\nResultado: %ld\n\n", z);
      system ("PAUSE");
